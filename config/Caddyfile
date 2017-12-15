@@ -1,0 +1,9 @@
+www.toapi-ebooks.com {
+    proxy / 127.0.0.1:5000
+    timeouts none
+    gzip
+}
+
+toapi-ebooks.com {
+    redir http://www.owllook.net
+}
