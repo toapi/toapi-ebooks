@@ -4,7 +4,7 @@ import random
 
 from locust import TaskSet, task, HttpLocust
 
-HTTP_URL = "http://0.0.0.0:5050/http://www.allitebooks.com/"
+HTTP_URL = "http://0.0.0.0:5000/http://www.allitebooks.com/"
 KEYWORD = ['python', 'php', 'go', 'java', 'c', 'c++', 'ruby', 'css', 'javascript', 'html', 'perl', 'c#', '.net']
 
 

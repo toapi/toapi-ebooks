@@ -3,7 +3,7 @@
 
 import os
 
-WORKERS = os.getenv('WORKERS', 2)
+WORKERS = os.getenv('WORKERS', 4)
 
 bind = '0.0.0.0:5000'
 max_requests = 1000
