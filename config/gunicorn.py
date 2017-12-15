@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-
-
 import os
 
 WORKERS = os.getenv('WORKERS', 4)
