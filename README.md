@@ -2,7 +2,7 @@
 
 ### What is toapi-ebooks?
 
-This project uses [toapi](https://github.com/gaojiuli/toapi) to build a friendly and robust API from some websites such as allitebooks, digilibraries,etc
+This project uses [toapi](https://github.com/gaojiuli/toapi) to build a friendly and robust API from some websites such as allitebooks, digilibraries, etc
 
 
 ``` shell
@@ -13,7 +13,7 @@ cd toapi-ebooks
 
 ```
 
-Please start redis before running this script: `python wsgi.py`
+Please start Redis before running this script: `python wsgi.py`
 
 Then, everything is done, the following content will show on screen:
 
@@ -27,4 +27,4 @@ Once the server is started, you can get JSON data from toapi-ebooks, visit `http
 
 ### Deploy:
 
-We recommend that you use Caddy(nginx) + gunicorn
+We recommend that you use Caddy(Nginx) + Gunicorn
