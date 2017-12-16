@@ -5,5 +5,5 @@ www.toapi-ebooks.com {
 }
 
 toapi-ebooks.com {
-    redir http://www.owllook.net
+    redir http://www.toapi-ebooks.net
 }
