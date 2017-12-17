@@ -2,7 +2,7 @@
 
 ### What is toapi-ebooks?
 
-This project uses [toapi](https://github.com/gaojiuli/toapi) to build a friendly and robust API from some websites such as allitebooks, digilibraries, etc
+This project uses [Toapi](https://github.com/gaojiuli/toapi) to build a friendly and robust API from some websites such as allitebooks, digilibraries, etc
 
 
 ``` shell
