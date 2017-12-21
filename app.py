@@ -9,5 +9,5 @@ api.register(Book)
 api.register(Detail)
 
 if __name__ == '__main__':
-    print(api.parse('/allitebooks/page/4/?s=python'))
+    print(api.parse('/allitebooks/page/2/?s=python'))
     api.serve()

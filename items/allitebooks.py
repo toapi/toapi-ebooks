@@ -18,9 +18,10 @@ class Page(Item):
     class Meta:
         source = None
         route = {
+            '/allitebooks/': '/',
             '/allitebooks/?s=:keyword': '/?s=:keyword',
-            '/allitebooks/:keyword': '/:keyword/',
-            '/allitebooks/': '/'
+            '/allitebooks/:keyword/': '/:keyword/',
+            '/allitebooks/page/:path': '/page/:path'
         }
 
 
