@@ -21,7 +21,7 @@ Then, everything is done, the following content will show on screen:
 
 ### Usage:
 
-Once the server is started, you can get JSON data from toapi-ebooks, visit `http://0.0.0.0:5000/http://www.allitebooks.com/?s=python`
+Once the server is started, you can get JSON data from toapi-ebooks, visit `http://127.0.0.1:5000/allitebooks/`
 
 ![RUN](./docs/02.png)
 
