@@ -10,17 +10,23 @@ class Page(Item):
 
     def clean_next_page(self, value):
         if isinstance(value, list):
-            return ['http://127.0.0.1:5000/' + i.get('href') for i in value]
+            return [i.get('href').replace('http://www.allitebooks.com/', 'http://127.0.0.1:5000/allitebooks/')
+                    for i in value]
         else:
             return ['http://127.0.0.1:5000/' + value]
 
     class Meta:
         source = None
-        route = '/.*?'
+        route = {
+            '/allitebooks/?s=:keyword': '/?s=:keyword',
+            '/allitebooks/:keyword': '/:keyword/',
+            '/allitebooks/': '/'
+        }
 
 
 class Book(Item):
     __base_url__ = "http://www.allitebooks.com"
+
     book_list = Css('article>div.entry-body>header>.entry-title>a', attr='href')
 
     def clean_book_list(self, book_list):
@@ -28,7 +34,8 @@ class Book(Item):
             result = [
                 {'id': str(index),
                  "name": value.text,
-                 "url": 'http://127.0.0.1:5000/' + value.get('href')
+                 "url": value.get('href').replace('http://www.allitebooks.com/',
+                                                  'http://127.0.0.1:5000/allitebooks-info/')
                  } for index, value in enumerate(book_list)
             ]
             return result
@@ -37,7 +44,7 @@ class Book(Item):
 
     class Meta:
         source = None
-        route = '/.*?'
+        route = Page.Meta.route
 
 
 class Detail(Item):
@@ -57,4 +64,4 @@ class Detail(Item):
 
     class Meta:
         source = None
-        route = '/.*?/'
+        route = {'/allitebooks-info/:keyword': '/:keyword/'}
